@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<game>
+    <config timePerPlayerSeconds="1500" letterDistributions="hdpe.scrybble.config.DefaultLetterDistributions" dictionary="hdpe.scrybble.dict.SOWPODSDictionary" definitionsUrl="http://en.wiktionary.org/wiki/%l" boardLayout="hdpe.scrybble.config.DefaultBoardLayout"/>
+    <rack playerStrategy="hdpe.scrybble.ai.simple.SimpleAIStrategy" playerName="Player 1">
+        <tiles>
+            <tile l="L"/>
+            <tile l="E"/>
+            <tile l="S"/>
+            <tile l="R"/>
+            <tile l="D"/>
+            <tile l="R"/>
+            <tile l="T"/>
+        </tiles>
+    </rack>
+    <rack playerStrategy="hdpe.scrybble.ai.simple.SimpleAIStrategy" playerName="Player 2">
+        <tiles>
+            <tile l="E"/>
+            <tile l="A"/>
+            <tile l="G"/>
+            <tile l="E"/>
+            <tile l="B"/>
+            <tile l="O"/>
+            <blank/>
+        </tiles>
+    </rack>
+    <turn player="Player 2">
+        <placeTiles>
+            <placement y="2" x="7">
+                <tile l="A"/>
+            </placement>
+            <placement y="3" x="7">
+                <tile l="B"/>
+            </placement>
+            <placement y="4" x="7">
+                <blank l="R"/>
+            </placement>
+            <placement y="5" x="7">
+                <tile l="E"/>
+            </placement>
+            <placement y="6" x="7">
+                <tile l="G"/>
+            </placement>
+            <placement y="7" x="7">
+                <tile l="E"/>
+            </placement>
+        </placeTiles>
+        <pickup>
+            <tile l="N"/>
+            <tile l="B"/>
+            <tile l="A"/>
+            <tile l="A"/>
+            <tile l="O"/>
+            <tile l="P"/>
+        </pickup>
+    </turn>
+    <turn player="Player 1">
+        <placeTiles>
+            <placement y="4" x="8">
+                <tile l="E"/>
+            </placement>
+            <placement y="4" x="9">
+                <tile l="D"/>
+            </placement>
+        </placeTiles>
+        <pickup>
+            <tile l="A"/>
+            <tile l="V"/>
+        </pickup>
+    </turn>
+    <turn player="Player 2">
+        <placeTiles>
+            <placement y="2" x="6">
+                <tile l="B"/>
+            </placement>
+            <placement y="3" x="6">
+                <tile l="O"/>
+            </placement>
+            <placement y="4" x="6">
+                <tile l="A"/>
+            </placement>
+        </placeTiles>
+        <pickup>
+            <tile l="D"/>
+            <tile l="Z"/>
+            <tile l="Q"/>
+        </pickup>
+    </turn>
+    <turn player="Player 1">
+        <swap>
+            <tiles>
+                <tile l="R"/>
+                <tile l="R"/>
+                <tile l="V"/>
+                <tile l="A"/>
+                <tile l="T"/>
+                <tile l="L"/>
+            </tiles>
+        </swap>
+        <pickup>
+            <tile l="I"/>
+            <tile l="Y"/>
+            <tile l="O"/>
+            <tile l="M"/>
+            <tile l="O"/>
+            <tile l="L"/>
+        </pickup>
+    </turn>
+    <turn player="Player 2">
+        <placeTiles>
+            <placement y="1" x="5">
+                <tile l="Z"/>
+            </placement>
+            <placement y="2" x="5">
+                <tile l="O"/>
+            </placement>
+            <placement y="3" x="5">
+                <tile l="N"/>
+            </placement>
+            <placement y="4" x="5">
+                <tile l="D"/>
+            </placement>
+            <placement y="5" x="5">
+                <tile l="A"/>
+            </placement>
+        </placeTiles>
+        <pickup>
+            <tile l="T"/>
+            <tile l="K"/>
+            <tile l="N"/>
+            <tile l="O"/>
+            <tile l="A"/>
+        </pickup>
+    </turn>
+</game>
