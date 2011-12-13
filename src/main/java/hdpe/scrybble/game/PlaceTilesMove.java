@@ -46,6 +46,14 @@ public final class PlaceTilesMove extends PlayerMove {
 
 		int score = calculateScore(game);
 		
+		if (game.getMode() == GameMode.PLAY && game.getHumanPlayerCount() == 1) {
+			try {
+				tp.validate(game.getDictionary());
+			} catch (NoSuchWordException e) {
+				throw new IllegalMoveException(e.getMessage(), this);
+			}
+		}
+		
 		for (TilePlacement placement : placements) {
 
 			Tile tile = null;

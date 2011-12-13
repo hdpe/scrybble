@@ -60,6 +60,13 @@ public class Game {
 	}
 	
 	/**
+	 * @return
+	 */
+	public GameMode getMode() {
+		return mode;
+	}	
+	
+	/**
 	 * @param mode
 	 */
 	public void setMode(GameMode mode) {
@@ -423,6 +430,20 @@ public class Game {
 		return board.getCentreSquare().getTile() == null;
 	}
 
+	/**
+	 * @param game
+	 * @return
+	 */
+	public int getHumanPlayerCount() {
+		int n = 0;
+		for (Player player : players) {
+			if (player.getState().isHumanControlled()) {
+				n ++;
+			}
+		}
+		return n;
+	}
+
 	void addRack(Player player, LoadedRack startRack) {
 		loadedRacks.put(player, startRack);
 	}
@@ -596,6 +617,10 @@ public class Game {
 				players.add(p.getState());
 			}
 			return players;
+		}
+
+		public int getHumanPlayerCount() {
+			return Game.this.getHumanPlayerCount();
 		}		
-	}	
+	}
 }

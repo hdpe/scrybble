@@ -120,7 +120,8 @@ public class RackPanel extends JPanel {
 		
 		swapButton.setEnabled(false);
 		
-		if (isMultipleHumanPlayerGame(game)) {
+		if (game.getHumanPlayerCount() > 1) {
+			showTilesCheckbox.setVisible(true);
 			showTilesCheckbox.setSelected(false);
 			showTilesCheckbox.setEnabled(true);
 			tilesPanel.setVisible(false);
@@ -151,16 +152,6 @@ public class RackPanel extends JPanel {
 		}
 		
 		revalidate();
-	}
-	
-	private boolean isMultipleHumanPlayerGame(GameState game) {
-		int n = 0;
-		for (PlayerState player : game.getPlayers()) {
-			if (player.isHumanControlled() && ++n > 1) {
-				return true;
-			}
-		}
-		return false;
 	}
 
 	public Set<RackTilePanel> getSelectedTiles() {

@@ -1,6 +1,8 @@
 package hdpe.scrybble.util;
 
+import hdpe.scrybble.game.Dictionary;
 import hdpe.scrybble.game.GameState;
+import hdpe.scrybble.game.NoSuchWordException;
 import hdpe.scrybble.game.SquareState;
 import hdpe.scrybble.game.WordDirection;
 
@@ -37,6 +39,15 @@ public class TilePlacements {
 		}
 		for (TileRun word : words) {
 			score += word.getScore();
+		}
+	}
+	
+	public void validate(Dictionary dictionary) throws NoSuchWordException {
+		for (TileRun word : words) {
+			String str = word.toWordString();
+			if (!dictionary.isValid(str)) {
+				throw new NoSuchWordException(str);
+			}
 		}
 	}
 	

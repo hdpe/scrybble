@@ -47,4 +47,9 @@ public interface GameState {
 	 * @return
 	 */
 	List<PlayerState> getPlayers();
+
+	/**
+	 * @return
+	 */
+	int getHumanPlayerCount();
 }
